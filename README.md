@@ -241,6 +241,7 @@ require public gRPC deployment.
 | [`base64-requirements.md`](./base64-requirements.md) | Normative YAML `signature` base64 profile. |
 | [`schema/README.md`](./schema/README.md) | JSON Schema maintenance notes. |
 | [`conformance/README.md`](./conformance/README.md) | Normative fixture index and rebuild entry point. |
+| [`implementation-kit/README.md`](./implementation-kit/README.md) | Non-normative language implementation kit. |
 | [`DIAGRAM.md`](./DIAGRAM.md) | Non-normative API diagram companion. |
 | [`original-readme.md`](./original-readme.md) | Historical starting point. |
 
