@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: Copyright 2026 NVIDIA CORPORATION & AFFILIATES
+# SPDX-License-Identifier: Apache-2.0
+
+version: v2
+managed:
+  enabled: true
+  override:
+    # REQUIRED: Replace this sentinel with the downstream Go module path.
+    - file_option: go_package_prefix
+      value: example.invalid/replace-with-your-module
+plugins:
+  - remote: buf.build/protocolbuffers/go:v1.36.12
+    revision: 1
+    out: go
+    opt:
+      - paths=source_relative
+    exclude_types:
+      - yaml_sigil.v1alpha1.SigningService
+      - yaml_sigil.v1alpha1.TranscriptionService
+      - yaml_sigil.v1alpha1.VerificationService
+inputs:
+  - directory: proto

@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: Copyright 2026 NVIDIA CORPORATION & AFFILIATES
+# SPDX-License-Identifier: Apache-2.0
+
+version: v2
+plugins:
+  - remote: buf.build/protocolbuffers/python:v36.0
+    revision: 1
+    out: python
+    exclude_types:
+      - yaml_sigil.v1alpha1.SigningService
+      - yaml_sigil.v1alpha1.TranscriptionService
+      - yaml_sigil.v1alpha1.VerificationService
+  - remote: buf.build/protocolbuffers/pyi:v36.0
+    revision: 1
+    out: python
+    exclude_types:
+      - yaml_sigil.v1alpha1.SigningService
+      - yaml_sigil.v1alpha1.TranscriptionService
+      - yaml_sigil.v1alpha1.VerificationService
+inputs:
+  - directory: proto
