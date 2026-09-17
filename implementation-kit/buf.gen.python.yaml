@@ -18,4 +18,8 @@ plugins:
       - yaml_sigil.v1alpha1.TranscriptionService
       - yaml_sigil.v1alpha1.VerificationService
 inputs:
-  - directory: proto
+  # Generates straight from the published specification, so no local clone is
+  # required. Replace `branch` with `tag: <release>` or `ref: <commit>` to pin.
+  - git_repo: https://github.com/NVIDIA/yaml-sigil-spec.git
+    branch: main
+    subdir: proto
